@@ -13,6 +13,9 @@ get_prop(bootanim, bootloader_boot_reason_prop)
 
 get_prop(bootanim, bootanim_config_prop)
 
+# Read persist.sys.theme to pick the light or dark animation.
+get_prop(bootanim, theme_prop)
+
 # Allow updating boot animation status.
 set_prop(bootanim, bootanim_system_prop)
 
