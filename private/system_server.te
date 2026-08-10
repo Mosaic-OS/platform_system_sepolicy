@@ -1003,6 +1003,7 @@ get_prop(system_server, mmd_shared_prop)
 # Allow system server to read device-specific USB APM properties
 get_prop(system_server, usb_disable_when_locked_prop)
 
+set_prop(system_server, adb_locked_prop)
 set_prop(system_server, security_usb_mode_prop)
 set_prop(system_server, deny_new_usb2_prop)
 

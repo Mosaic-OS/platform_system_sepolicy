@@ -994,6 +994,7 @@ persist.sys.device_provisioned u:object_r:provisioned_prop:s0 exact string
 
 persist.sys.theme               u:object_r:theme_prop:s0 exact string
 
+persist.security.adb_locked u:object_r:adb_locked_prop:s0 exact bool
 persist.security.usb_mode u:object_r:security_usb_mode_prop:s0 exact int
 
 sys.retaildemo.enabled u:object_r:retaildemo_prop:s0 exact int
