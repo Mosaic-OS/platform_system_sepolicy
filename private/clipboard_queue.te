@@ -1,0 +1,12 @@
+# Copyright (C) 2026 The MosaicOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+
+type clipboard_queue_service, app_api_service, system_server_service, service_manager_type;
+type clipboard_queue_data_file, file_type, data_file_type, core_data_file_type;
+
+type_transition system_server system_data_file:dir clipboard_queue_data_file "clipboard_queue";
+allow system_server clipboard_queue_data_file:dir create_dir_perms;
+allow system_server clipboard_queue_data_file:file create_file_perms;
+
+neverallow appdomain clipboard_queue_data_file:{ dir file } { open read write append };

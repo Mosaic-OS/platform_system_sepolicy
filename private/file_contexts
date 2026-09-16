@@ -607,6 +607,7 @@
 /data		u:object_r:system_data_root_file:s0
 /data/(.*)?		u:object_r:system_data_file:s0
 /data/userdata_exp\.[^/]+ u:object_r:exp_partition_data_file:s0
+/data/system/clipboard_queue(/.*)? u:object_r:clipboard_queue_data_file:s0
 /data/system/environ(/.*)? u:object_r:environ_system_data_file:s0
 /data/system/packages\.list u:object_r:packages_list_file:s0
 /data/system/users/user\.list u:object_r:user_list_data_file:s0
