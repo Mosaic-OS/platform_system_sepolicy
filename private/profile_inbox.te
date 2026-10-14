@@ -1,0 +1,13 @@
+# Copyright (C) 2026 The MosaicOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+
+type profile_inbox_service, app_api_service, system_server_service, service_manager_type;
+type profile_inbox_data_file, file_type, data_file_type, core_data_file_type;
+typealias profile_inbox_data_file alias clipboard_queue_data_file;
+
+type_transition system_server system_data_file:dir profile_inbox_data_file "profile_inbox";
+allow system_server profile_inbox_data_file:dir create_dir_perms;
+allow system_server profile_inbox_data_file:file create_file_perms;
+
+neverallow appdomain profile_inbox_data_file:{ dir file } { open read write append };
